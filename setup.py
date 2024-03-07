@@ -25,7 +25,7 @@ setup(
     version=get_version('paccmann_predictor/__init__.py'),
     description=('PyTorch implementation of PaccMann'),
     long_description=open('README.md').read(),
-    url='https://github.com/PaccMann/paccmann_predictor',
+    url='https://github.com/PhillipDowney/paccmann_predictor',
     author='Ali Oskooei, Jannis Born, Matteo Manica, Joris Cadow',
     author_email=(
         'ali.oskooei@gmail.com, jab@zurich.ibm.com, '
