@@ -124,7 +124,7 @@ def main(
         gene_expression_processing_parameters=params.get(
             'gene_expression_processing_parameters', {}
         ),
-        device=torch.device(params.get('dataset_device', 'cpu')),
+        device=None,
         iterate_dataset=False
     )
     test_loader = torch.utils.data.DataLoader(
@@ -140,7 +140,7 @@ def main(
 
     device = get_device()
     logger.info(
-        f'Device for data loader is {test_dataset.device} and for '
+        f'Device for data loader is {getattr(test_dataset, "device", None)} and for '
         f'model is {device}'
     )
 

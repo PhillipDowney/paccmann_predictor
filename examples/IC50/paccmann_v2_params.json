@@ -52,6 +52,5 @@
     "optimizer": "adam",
     "loss_fn": "mse",
     "epochs": 10,
-    "save_model": 25,
-    "dataset_device": "cpu"
+    "save_model": 25
 }

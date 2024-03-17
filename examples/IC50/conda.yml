@@ -1,3 +1,4 @@
+# Original environment file, not used in openad model service
 name: paccmann_predictor
 channels:
  - https://conda.anaconda.org/rdkit

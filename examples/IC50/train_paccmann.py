@@ -141,7 +141,7 @@ def main(
         gene_expression_processing_parameters=params.get(
             "gene_expression_processing_parameters", {}
         ),
-        device=torch.device(params.get("dataset_device", "cpu")),
+        device=None,  # torch.device(params.get("dataset_device", "cuda")),
         iterate_dataset=False,
     )
     train_loader = torch.utils.data.DataLoader(
@@ -169,7 +169,7 @@ def main(
             "gene_expression_processing_parameters",
             train_dataset.gene_expression_dataset.processing,
         ),
-        device=torch.device(params.get("dataset_device", "cpu")),
+        device=None,
         iterate_dataset=False,
     )
     test_loader = torch.utils.data.DataLoader(
@@ -186,7 +186,7 @@ def main(
 
     device = get_device()
     logger.info(
-        f"Device for data loader is {train_dataset.device} and for "
+        f"Device for data loader is {getattr(test_dataset, 'device', None)} and for "
         f"model is {device}"
     )
     save_top_model = os.path.join(model_dir, "weights/{}_{}_{}.pt")
@@ -278,7 +278,7 @@ def main(
 
         predictions = np.array([p.cpu() for preds in predictions for p in preds])
         labels = np.array([l.cpu() for label in labels for l in label])
-        test_pearson_a = pearsonr(torch.Tensor(predictions), torch.Tensor(labels))
+        test_pearson_a = pearsonr(torch.Tensor(predictions).squeeze(), torch.Tensor(labels).squeeze())
         test_rmse_a = np.sqrt(np.mean((predictions - labels) ** 2))
         test_loss_a = test_loss / len(test_loader)
         logger.info(
@@ -301,23 +301,23 @@ def main(
                     f'\t New best performance in "{metric}"'
                     f" with value : {val:.7f} in epoch: {epoch}"
                 )
-
+        print('np.shape(predictions[0])', np.shape(predictions[0]))
         def update_info():
             return {
                 "best_rmse": str(min_rmse),
                 "best_pearson": str(float(max_pearson)),
                 "test_loss": str(min_loss),
-                "predictions": [float(p) for p in predictions],
+                "predictions": [float(p[0]) for p in predictions],
             }
 
-        if test_loss_a < min_loss:
+        if test_loss_a < float(min_loss):
             min_rmse = test_rmse_a
             min_loss = test_loss_a
             min_loss_pearson = test_pearson_a
             info = update_info()
             save(save_top_model, "mse", "best", min_loss)
             ep_loss = epoch
-        if test_pearson_a > max_pearson:
+        if test_pearson_a > float(max_pearson):
             max_pearson = test_pearson_a
             max_pearson_loss = test_loss_a
             info = update_info()
