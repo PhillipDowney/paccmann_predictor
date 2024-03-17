@@ -6,9 +6,9 @@ OpenAD is to present PaccMann models for inference and training.
 One goal is to make small changes so we can update dependencies:
 
 * python from 3.7 to 3.10
-* torch from 1.13.1 to 2.2.1
-* pytoda @ paccmann_datasets from 0.0.1 or 0.1.1 to 1.1.0
-* CUDA 11.8
+* torch from 1.13.1 to 2.2.1 (latest at time of writing)
+* pytoda @ paccmann_datasets from 0.0.1 or 0.1.1 to 1.1.3
+* CUDA 11.8 (latest version of cuda-11)
 
 It is being developed on an Amazon AWS g5 host (g5.16xlarge), running Ubuntu.
 
