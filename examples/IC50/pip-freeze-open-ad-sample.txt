@@ -1,0 +1,163 @@
+# Sample output of `pip freeze` in conda (virtual) env, `openad-train` during development.
+# NOT yet tested as an actual requirements.txt for direct installation.
+absl-py==2.1.0
+annotated-types==0.6.0
+argon2-cffi==23.1.0
+argon2-cffi-bindings==21.2.0
+astunparse==1.6.3
+biopython==1.83
+boto3==1.34.58
+botocore==1.34.58
+brc-pytorch==0.1.3
+cachetools==5.3.3
+certifi==2024.2.2
+cffi==1.16.0
+charset-normalizer==3.3.2
+click==8.1.7
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1666700638685/work
+contourpy==1.2.0
+cycler==0.12.1
+Cython==3.0.9
+dataclasses==0.6
+deepchem @ git+https://github.com/deepchem/deepchem@0345f7e4d059a5e6f5aef38d71fc23895c1cb68e
+dill==0.3.8
+diskcache==5.6.3
+exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1704921103267/work
+fastprogress==1.0.3
+FCD==1.2
+filelock==3.9.0
+flatbuffers==24.3.7
+fonttools==4.49.0
+fsspec==2024.2.0
+future==1.0.0
+fuzzywuzzy==0.18.0
+gast==0.4.0
+gensim==4.3.2
+google-auth==2.28.1
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+grpcio==1.62.1
+gt4sd_common @ file:///home/deanelzinga/Open-AD-Model-Service/openad-model-inference/gt4sd_common
+gt4sd_inference_paccmann @ file:///home/deanelzinga/Open-AD-Model-Service/openad-model-inference/gt4sd_paccmann
+gt4sd_training_paccmann @ file:///home/deanelzinga/Open-AD-Model-Service/openad-model-training/gt4sd_paccmann
+guacamol @ git+https://github.com/brian316/guacamol.git@1528fe0f47baf50809766490d820345d17c9080c
+guacamol_baselines @ git+https://github.com/PhillipDowney/guacamol_baselines.git@58e39ed6ac1bd7c43110ab0771832ec9a2941f39
+h5py==3.10.0
+huggingface-hub==0.21.4
+idna==3.6
+importlib_metadata==7.0.2
+importlib_resources==6.1.3
+iniconfig @ file:///home/conda/feedstock_root/build_artifacts/iniconfig_1673103042956/work
+Jinja2==3.1.2
+jmespath==1.0.1
+joblib==1.3.2
+keras==2.10.0
+Keras-Preprocessing==1.1.2
+kiwisolver==1.4.5
+latexcodec==3.0.0
+libclang==16.0.6
+lmdb==1.4.1
+Markdown==3.5.2
+MarkupSafe==2.1.3
+matplotlib==3.8.3
+minio==7.2.5
+monty==2024.2.26
+moses @ git+https://github.com/PhillipDowney/moses.git@7ce065b8c6b91b42382c6dd2739a7f6d26aaa26d
+mpmath==1.3.0
+networkx==3.2.1
+nltk==3.8.1
+numpy==1.26.3
+nvidia-cublas-cu11==11.11.3.6
+nvidia-cuda-cupti-cu11==11.8.87
+nvidia-cuda-nvrtc-cu11==11.8.89
+nvidia-cuda-runtime-cu11==11.8.89
+nvidia-cudnn-cu11==8.7.0.84
+nvidia-cufft-cu11==10.9.0.58
+nvidia-curand-cu11==10.3.0.86
+nvidia-cusolver-cu11==11.4.1.48
+nvidia-cusparse-cu11==11.7.5.86
+nvidia-nccl-cu11==2.19.3
+nvidia-nvtx-cu11==11.8.86
+oauthlib==3.2.2
+opt-einsum==3.3.0
+-e git+ssh://git@github.com/PhillipDowney/paccmann_chemistry.git@d7f9ac3da8c53f711ece5ade9a53c3b387006530#egg=paccmann_chemistry
+-e git+ssh://git@github.com/PhillipDowney/paccmann_generator.git@f34bac55940df0d42036929e05755be5e5e45882#egg=paccmann_generator
+-e git+ssh://git@github.com/PhillipDowney/paccmann_omics.git@1f1cfa3052c60806698d4583545c072082b8de21#egg=paccmann_omics
+paccmann_predictor @ git+https://github.com/PhillipDowney/paccmann_predictor@c8aeee379620e5328f3ac7c1cdcb710a6fccc600
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1696202382185/work
+palettable==3.3.3
+pandas==2.2.1
+pillow==10.2.0
+plotly==5.19.0
+pluggy @ file:///home/conda/feedstock_root/build_artifacts/pluggy_1706116770704/work
+protobuf==3.19.6
+PubChemPy==1.0.4
+pyasn1==0.5.1
+pyasn1-modules==0.3.0
+pybtex==0.24.0
+pycparser==2.21
+pycryptodome==3.20.0
+pydantic==2.6.3
+pydantic-settings==2.2.1
+pydantic_core==2.16.3
+pyfaidx==0.8.1.1
+pymatgen==2024.3.1
+pyparsing==3.1.2
+PyTDC==0.4.1
+pytest @ file:///home/conda/feedstock_root/build_artifacts/pytest_1708821594270/work
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+pytoda @ git+https://github.com/PhillipDowney/paccmann_datasets@bc896fa558b333b5ac2f57b5470ab88d93af0ffc
+pytz==2024.1
+PyYAML==6.0.1
+rdkit==2022.9.5
+rdkit-pypi==2022.9.5
+regex==2023.12.25
+reinvent-chemistry==0.0.51
+requests==2.31.0
+requests-oauthlib==1.3.1
+rsa==4.9
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+safetensors==0.4.2
+scikit-learn==1.4.1.post1
+scipy==1.12.0
+seaborn==0.13.2
+selfies==2.1.1
+six==1.16.0
+smart-open==7.0.1
+SmilesPE==0.0.3
+spglib==2.3.1
+sympy==1.12
+tabulate==0.9.0
+tape-proteins==0.5
+tenacity==8.2.3
+tensorboard==2.10.1
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorboardX==2.6
+tensorflow==2.10.1
+tensorflow-estimator==2.10.0
+tensorflow-io-gcs-filesystem==0.31.0
+termcolor==2.4.0
+threadpoolctl==3.3.0
+tokenizers==0.15.2
+tomli @ file:///home/conda/feedstock_root/build_artifacts/tomli_1644342247877/work
+torch==2.2.1+cu118
+torch-tb-profiler==0.4.3
+torchaudio==2.2.1+cu118
+torchvision==0.17.1+cu118
+toxsmi @ git+https://github.com/PhillipDowney/chemical_representation_learning_for_toxicity_prediction@f238b6b912bccbe49168e0075b85c673236e86d4
+tqdm==4.66.2
+transformers==4.38.2
+triton==2.2.0
+typing_extensions==4.8.0
+tzdata==2024.1
+uncertainties==3.1.7
+Unidecode==1.3.8
+upfp==0.0.5
+urllib3==2.0.7
+Werkzeug==3.0.1
+wrapt==1.16.0
+zipp==3.17.0
